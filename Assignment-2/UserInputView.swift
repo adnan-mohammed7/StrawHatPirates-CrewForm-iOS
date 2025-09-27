@@ -123,18 +123,6 @@ struct UserInputView: View {
                                 .fontWeight(.semibold)
                                 .foregroundStyle(bountyId.count <= 20 ? Color(.gray) : Color(.red))
                             Spacer()
-                            
-                            if(bountyId.count < 3){
-                                Text("Atleast 3 characters")
-                                    .font(.caption)
-                                    .fontWeight(.semibold)
-                                    .foregroundStyle(.red)
-                            }else if(bountyId.count > 20){
-                                Text("Not more then 20 characters")
-                                    .font(.caption)
-                                    .fontWeight(.semibold)
-                                    .foregroundStyle(.red)
-                            }
                         }
                     }
                 }
