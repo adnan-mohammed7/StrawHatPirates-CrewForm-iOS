@@ -10,10 +10,9 @@ import SwiftUI
 struct HomepageView: View {
     var body: some View {
         VStack(spacing: 5){
-            Image("ship")
-                .resizable()
-                .frame(width: 100, height: 100)
-                .clipShape(Circle())
+            Text("⛵️")
+                .font(.system(size: 60))
+                .padding(.bottom, 5)
             
             Text("Straw Hat Pirates")
                 .font(.title)
@@ -25,8 +24,10 @@ struct HomepageView: View {
             
             Text("\"I'm gonna be King of the Pirates\"")
                 .italic()
-                .foregroundStyle(.red)
+                .foregroundStyle(Color(.red))
                 .padding(.top, 5)
+            
+            UserInputView()
         }
         Spacer()
     }
