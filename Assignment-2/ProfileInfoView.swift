@@ -1,13 +1,13 @@
 //
-//  UserInputView.swift
+//  ProfileInfoView.swift
 //  Assignment-2
 //
-//  Created by user278021 on 9/26/25.
+//  Created by user278021 on 9/29/25.
 //
 
 import SwiftUI
 
-struct UserInputView: View {
+struct ProfileInfoView: View {
     @State private var name = ""
     @State private var email = ""
     @State private var bountyId = ""
@@ -140,5 +140,5 @@ struct UserInputView: View {
 }
 
 #Preview {
-    UserInputView()
+    ProfileInfoView()
 }

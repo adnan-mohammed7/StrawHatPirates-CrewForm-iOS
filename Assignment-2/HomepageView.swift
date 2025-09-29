@@ -27,7 +27,7 @@ struct HomepageView: View {
                 .foregroundStyle(Color(.red))
                 .padding(.top, 5)
             
-            UserInputView()
+            ProfileInfoView()
         }
         Spacer()
     }
