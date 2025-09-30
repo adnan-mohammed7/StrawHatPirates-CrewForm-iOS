@@ -83,6 +83,8 @@ struct Part2View: View {
                         .font(.title3)
                         .padding(.horizontal, 10)
                         .padding(.vertical, 10)
+                        .keyboardType(.emailAddress)
+                        .textContentType(.emailAddress)
                         .border(.black)
                         .background(
                             RoundedRectangle(cornerRadius: 10)
@@ -105,6 +107,8 @@ struct Part2View: View {
                         .font(.title3)
                         .padding(.horizontal, 10)
                         .padding(.vertical, 10)
+                        .keyboardType(.emailAddress)
+                        .textContentType(.emailAddress)
                         .border(.black)
                         .background(
                             RoundedRectangle(cornerRadius: 10)

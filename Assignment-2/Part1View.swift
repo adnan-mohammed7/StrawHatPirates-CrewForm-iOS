@@ -241,7 +241,7 @@ struct Part1View: View {
                             Text("Powers don't match")
                                 .font(.caption)
                                 .fontWeight(.semibold)
-                                .foregroundStyle(confirmPower.count <= 20 ? Color(.gray) : Color(.red))
+                                .foregroundStyle(Color(.red))
                             Spacer()
                         }
                     }
