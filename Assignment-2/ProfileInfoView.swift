@@ -41,7 +41,7 @@ struct ProfileInfoView: View {
                         .padding(.horizontal)
                         .padding(.vertical, 13)
                         .background(
-                            RoundedRectangle(cornerRadius: 8)
+                            RoundedRectangle(cornerRadius: 10)
                                 .fill(Color(.systemGray6))
                         )
                 }
@@ -72,7 +72,7 @@ struct ProfileInfoView: View {
                         .padding(.horizontal)
                         .padding(.vertical, 13)
                         .background(
-                            RoundedRectangle(cornerRadius: 8)
+                            RoundedRectangle(cornerRadius: 10)
                                 .fill(Color(.systemGray6))
                         )
                         .autocapitalization(.none)
@@ -112,7 +112,7 @@ struct ProfileInfoView: View {
                         .padding(.horizontal)
                         .padding(.vertical, 13)
                         .background(
-                            RoundedRectangle(cornerRadius: 8)
+                            RoundedRectangle(cornerRadius: 10)
                                 .fill(Color(.systemGray6))
                         )
                     
