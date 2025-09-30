@@ -1,13 +1,13 @@
 //
-//  HomepageView.swift
+//  Part1View.swift
 //  Assignment-2
 //
-//  Created by user278021 on 9/26/25.
+//  Created by user278021 on 9/29/25.
 //
 
 import SwiftUI
 
-struct HomepageView: View {
+struct Part1View: View {
     @State private var name = ""
     @State private var email = ""
     @State private var bountyId = ""
@@ -94,6 +94,9 @@ struct HomepageView: View {
                             }
                             
                             TextField("contact@grandline.sea", text: $email)
+                                .autocorrectionDisabled()
+                                .keyboardType(.emailAddress)
+                                .textContentType(.emailAddress)
                                 .font(.subheadline)
                                 .padding(.horizontal)
                                 .padding(.vertical, 13)
@@ -337,41 +340,41 @@ struct HomepageView: View {
             
             Spacer()
             
-                Button(){
-                    showPopup = true
-                } label: {
-                    HStack{
-                        Text("⛵️")
-                        Text("Set Sail")
-                            .fontWeight(.semibold)
-                            .foregroundStyle(.white)
-                        Text("🏴‍☠️")
-                    }
-                    .font(.title2)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 20)
-                    .background(
-                        RoundedRectangle(cornerRadius: 15, style: .continuous)
-                            .fill(disableSubmitBtn ? Color(.systemGray6) : Color.customRed)
-                        )
+            Button(){
+                showPopup = true
+            } label: {
+                HStack{
+                    Text("⛵️")
+                    Text("Set Sail")
+                        .fontWeight(.semibold)
+                        .foregroundStyle(.white)
+                    Text("🏴‍☠️")
                 }
-                .padding(.horizontal, 20)
-                .disabled(disableSubmitBtn)
-                .alert("Welcome to the Crew! 🎉", isPresented: $showPopup) {
-                    Button("Start Adventure") {
-                        name = ""
-                        email = ""
-                        bountyId = ""
-                        secretPower = ""
-                        confirmPower = ""
-                        joinStrawHats = false
-                        treasureUpdates = true
-                        bountyValue = 50
-                    }
-                    Button("Stay Here", role: .cancel) {}
-                    } message: {
-                        Text("You're now a Straw Hat Pirate with a \(Int(bountyValue)) berry bounty!")
-                    }
+                .font(.title2)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 20)
+                .background(
+                    RoundedRectangle(cornerRadius: 15, style: .continuous)
+                        .fill(disableSubmitBtn ? Color(.systemGray6) : Color.customRed)
+                )
+            }
+            .padding(.horizontal, 20)
+            .disabled(disableSubmitBtn)
+            .alert("Welcome to the Crew! 🎉", isPresented: $showPopup) {
+                Button("Start Adventure") {
+                    name = ""
+                    email = ""
+                    bountyId = ""
+                    secretPower = ""
+                    confirmPower = ""
+                    joinStrawHats = false
+                    treasureUpdates = true
+                    bountyValue = 50
+                }
+                Button("Stay Here", role: .cancel) {}
+            } message: {
+                Text("You're now a Straw Hat Pirate with a \(Int(bountyValue)) berry bounty!")
+            }
             
             if(disableSubmitBtn){
                 Text("Complete all fields to join the crew")
@@ -379,9 +382,9 @@ struct HomepageView: View {
                     .foregroundStyle(Color(.systemGray))
                     .padding()
             }
-            }
-            Spacer()
         }
+        Spacer()
+    }
     
     var isEmailCorrect: Bool{
         return email.contains("@") && email.contains(".")
@@ -416,9 +419,9 @@ struct HomepageView: View {
 }
 
 extension Color {
-  static let customRed = Color( red: 225.0/255.0, green: 63.0/255.0, blue: 63.0/255.0)
+    static let customRed = Color( red: 225.0/255.0, green: 63.0/255.0, blue: 63.0/255.0)
 }
 
 #Preview {
-    HomepageView()
+    Part1View()
 }
